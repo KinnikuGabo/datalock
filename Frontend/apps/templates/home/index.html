@@ -1,0 +1,50 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="col-12">
+                <center>
+                    <h3>¿Qué trámite deseas realizar hoy?</h3>
+                </center>
+                <br>
+                <div class="dependenciaUno" style="height: 80px; width: 80px;">
+                    <a href="https://www.sat.gob.mx">
+                        <img src="{{ config.ASSETS_ROOT }}/img/Sat.png" alt="SAT" >
+                    </a>
+                </div>
+                <div class="dependenciaDos" style="height: 80px; width: 80px;">
+                    <a href="/registrocivil">
+                        <img src="{{ config.ASSETS_ROOT }}/img/Registro.png" alt="Registro Civil"  >
+                    </a>
+                </div>
+                <div class="dependenciaTres" style="height: 80px; width: 80px;">
+                    <a href="/notaria">
+                        <img src="{{ config.ASSETS_ROOT }}/img/Notaria.png" alt="Notario" >
+                    </a>
+                </div>
+                <div class="Upload">
+                    <!--Aqui pon el link de Docto.html--><a href=""</a>>Sube tus archivos</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<script>
+    $(document).ready(function () {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+    });
+</script>
+
+{% endblock javascripts %}
